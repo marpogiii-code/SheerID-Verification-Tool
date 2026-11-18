@@ -392,7 +392,7 @@ class GeminiVerifier:
                 proxy = f"http://{proxy}"
             proxies = {"all://": proxy}
         
-        self.client = httpx.Client(timeout=30, proxies=proxies)
+        self.client = httpx.Client(timeout=30)
         self.org = None
     
     def __del__(self):
